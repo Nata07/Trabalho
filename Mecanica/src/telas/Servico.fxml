@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="597.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telas.OrdemServicoController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="60.0" prefHeight="90.0" prefWidth="673.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="44.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="348.0" minWidth="10.0" prefWidth="348.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="3.0" prefWidth="55.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="222.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="jlbNome" text="nome" GridPane.columnIndex="1" />
+            <Label fx:id="jlbCPF" text="cpf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="jlbRG" text="rg" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="jlbEndereco" prefHeight="17.0" prefWidth="138.0" text="endereco" GridPane.columnIndex="3" />
+            <Label fx:id="jlbTelefone" text="telefone" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="Nome" text="Nome: " />
+            <Label fx:id="CPF" text="CPF: " GridPane.rowIndex="1" />
+            <Label fx:id="RG" text="RG: " GridPane.rowIndex="2" />
+            <Label fx:id="Endereco" text="Endereço: " GridPane.columnIndex="2" />
+            <Label fx:id="Telefone" text="Telefone: " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="14.0" layoutY="176.0" text="Mecanicos" />
+      <ComboBox fx:id="mecanico" layoutX="85.0" layoutY="172.0" prefWidth="150.0" />
+      <GridPane layoutX="14.0" layoutY="217.0" prefHeight="90.0" prefWidth="269.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="86.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="201.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Carro:" />
+            <Label text="Placa:" GridPane.rowIndex="1" />
+            <Label text="Ano:" GridPane.rowIndex="2" />
+            <TextField fx:id="jtfNomeCarro" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="jtfPlaca" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="110.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="jtfAno" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="698.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Salvar" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox layoutX="504.0" layoutY="274.0" spacing="15.0">
+         <children>
+            <Button fx:id="btnOrdem" mnemonicParsing="false" onAction="#handleOrdemServico" text="Lançar Ordem" />
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#handleCancelar" text="Cancelar" />
+         </children>
+      </HBox>
+      <Pane layoutX="14.0" layoutY="319.0" prefHeight="59.0" prefWidth="574.0">
+         <children>
+            <Label layoutX="8.0" layoutY="6.0" prefHeight="17.0" prefWidth="30.0" text="Item" />
+            <HBox layoutX="4.0" layoutY="23.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="jtfItem" prefHeight="25.0" prefWidth="39.0" />
+                  <TextField fx:id="jtfDados" prefHeight="25.0" prefWidth="159.0" />
+                  <TextField fx:id="jtfQuantidade" prefHeight="25.0" prefWidth="97.0" />
+                  <TextField fx:id="jtfPreco" />
+                  <TextField fx:id="jtfTotal" prefHeight="25.0" prefWidth="82.0" />
+               </children>
+            </HBox>
+            <Label layoutX="84.0" layoutY="6.0" text="Dados do Produto" />
+            <Label layoutX="240.0" layoutY="6.0" text="Quantidade" />
+            <Label layoutX="376.0" layoutY="6.0" text="Preço/Unid" />
+            <Label layoutX="517.0" layoutY="6.0" text="Total" />
+         </children>
+      </Pane>
+      <Button fx:id="btnIncluir" layoutX="613.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleIncluir" text="Incluir" />
+      <TableView fx:id="tabelaOrdem" layoutX="12.0" layoutY="386.0" prefHeight="193.0" prefWidth="673.0">
+        <columns>
+          <TableColumn fx:id="colunaDados" prefWidth="251.0" text="Dados do Produto" />
+            <TableColumn fx:id="colunaQuantidade" prefWidth="131.0" text="Quantidade" />
+            <TableColumn fx:id="colunaPreco" prefWidth="162.0" text="Preço/unid." />
+            <TableColumn fx:id="colunaTotal" prefWidth="128.0" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
