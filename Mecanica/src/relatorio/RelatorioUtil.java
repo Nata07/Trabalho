@@ -17,7 +17,7 @@ import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
 public class RelatorioUtil {
-
+/* TESTE GIT */ 
 	public void viewReport(String pathRelatorio, Connection con,
 			Map<String, Object> parametros) {
 		try {
